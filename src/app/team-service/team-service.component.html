@@ -1,0 +1,29 @@
+<div *ngFor="let team of teams" class="card">
+    <div class="card-header">
+        <div class="row">
+            <!-- <div class="col-1"><div class="card-text" style="font-size: 26px">#{{team.ranking}}</div></div>
+            <div class="col-1"><img src={{team.logo}} width="40" height="40" alt=""></div> -->
+            <div class="col-7"><div class="card-text" style="font-weight: bold; font-size: 20px;">{{team.name}}</div></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <div class="card">
+                    <img class="" src={{team.logo}} alt="" width="60%" height="60%" style="display:block;margin-left:auto;margin-right:auto">
+                    <div class="card-body">
+                      <div class="card-text" style="font-weight:bold;display:block;margin-left:auto;margin-right:auto">Rank: {{team.ranking}}</div>
+                    </div>
+                </div>
+            </div>
+            <div *ngFor="let player of team.players" class="col-2">
+                <div class="card">
+                    <img class="card-img-top" src={{player.image}} alt="">
+                    <div class="card-body">
+                      <h6 class="card-title" style="font-weight: bold;display:block;margin-left:auto;margin-right:auto"><img src={{player.country.flag}} width="20%" height="20%"> {{player.nickname}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
